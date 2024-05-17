@@ -17,21 +17,5 @@
             <button type="submit"><a href="https://wa.me/message/Y7U6WL622V67C1"></a></a>Send</button>
         </form>
     </div>
-
-    <script>
-        function sendComment(event) {
-            event.preventDefault(); // Mencegah form submit default
-
-            const comment = document.getElementById('comment').value;
-            const phoneNumber = '6287862077052'; // Ganti dengan nomor WhatsApp tujuan dengan format internasional
-            const message = `Comment: ${comment}`;
-            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&amp;text=${encodeURIComponent(message)}`;
-            // Buat iframe untuk mengirim pesan ke WhatsApp
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = whatsappURL;
-            document.body.appendChild(iframe);
-        }
-    </script>
 </body>
 </html>
